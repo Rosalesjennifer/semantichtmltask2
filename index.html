@@ -3,149 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Online Store </title>
-    <link rel="stylesheet"href="style.css">
+    <title>My Online Store</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #ecf0f1;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #2980b9;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        article {
+            margin-bottom: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        h3 {
+            color: #e74c3c;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #3498db;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .product-details {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .buy-button:hover {
+            background-color: #2980b9;
+        }
+        article#About figure {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        article#About img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        article#About p {
+            color: #555;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        text-align: center;
-    }
-
-    header {
-        background-color: #333333;
-        color: #fff;
-        padding: 10px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-        
-    }
-
-    .product {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-        color: #333333;
-    }
-
-    p {
-        color: #666;
-    }
-
-    .buy-button {
-        display: inline-block;
-        padding: 10px;
-        margin-top: 10px;
-        background-color: #4caf50;  
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .buy-button:hover {
-        background-color: #45a049;
-    }
-    
-</style>
 <body>
     <header>
-    <h1>WELCOME TO MY ONLINE STORE</h1>
-    <nav>
-        <ul>
-            <li> <a href="index.html">Home</a></li>
-            <li> <a href="#AboutUs">AboutUs</a></li>
-            <li> <a href="#Products">Products</a></li>
-            <li> <a href="#Promos">Promos</a></li>
-            <li> <a href="#ContactUs">ContactUs</a></li>
-        </ul>
+        <h1>WELCOME TO MY ONLINE STORE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#AboutUs">About Us</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#Promos">Promos</a></li>
+                <li><a href="#ContactUs">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
+    <hr>
+    <main>
+        <article id="About">
+            <section>
+                <h2>About Us</h2>
+            </section>
+            <figure>
+                <img src="istockphoto-496280806-612x612.jpg" alt="About Us Image">
+                <p>Welcome to Simple Online Store! We are passionate about providing high-quality products that make your life easier and more enjoyable. Our mission is to offer a seamless shopping experience with a focus on simplicity and customer satisfaction. At Simple Online Store, we believe in the power of simplicity. Our carefully curated selection of products reflects our commitment to quality, functionality, and style. Whether you're looking for everyday essentials or unique finds, we've got you covered. Thank you for choosing Simple Online Store. We appreciate your support and look forward to serving you with the best products and excellent customer service. Feel free to explore our catalog and contact us if you have any questions or feedback.</p>
+            </figure>
+        </article>
         <hr>
-        <main>
-            <article id="About">
-                <section>
-                    <h2>About us</h2>
-                </section>
-                <figure>
-                    <img src="istockphoto-496280806-612x612.jpg" alt="">
-                    <p>Welcome to Simple Online Store! We are passionate about providing high-quality products that make your life easier and more enjoyable. Our mission is to offer a seamless shopping experience with a focus on simplicity and customer satisfaction At Simple Online Store, we believe in the power of simplicity. Our carefully curated selection of products reflects our commitment to quality, functionality, and style. Whether you're looking for everyday essentials or unique finds, we've got you covered Thank you for choosing Simple Online Store. We appreciate your support and look forward to serving you with the best products and excellent customer service. Feel free to explore our catalog and contact us if you have any questions or feedback</p>
-                </figure>
+        <article id="Products">
+            <section>
+                <h2>Products</h2>
+                <h3>Air Force 1</h3>
+            </section>
+            <figure class="product-card">
+                <img src="shoes.jpg" alt="Air Force 1">
+                <figcaption class="product-details">
+                    <h3 class="product-title">Air Force 1</h3>
+                    <p class="product-description">Classic and stylish sneakers for any occasion. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel velit nec libero finibus pharetra eu ac velit.</p>
+                    <p class="product-price">$99.99</p>
+                    <button class="buy-button">Buy Now</button>
+                </figcaption>
+            </figure>
+            <figure class="product-card">
+                <img src="lv.jpg" alt="Lv Sling bag">
+                <figcaption class="product-details">
+                    <h3 class="product-title">Lv Sling bag</h3>
+                    <p class="product-description">Luxurious and practical sling bag for your essentials. Integer at enim eu ligula rhoncus venenatis. Aliquam et ligula at nisl cursus venenatis.</p>
+                    <p class="product-price">$149.99</p>
+                    <button class="buy-button">Buy Now</button>
+                </figcaption>
+            </figure>
+            <figure class="product-card">
+                <img src="versace.jpg" alt="Versace Perfume">
+                <figcaption class="product-details">
+                    <h3 class="product-title">Versace Perfume</h3>
+                    <p class="product-description">Elegant and captivating fragrance for every occasion. Nam vel sem vel arcu posuere tincidunt. Fusce volutpat velit eu neque ultrices, vel pellentesque sem vulputate.</p>
+                    <p class="product-price">$79.99</p>
+                    <button class="buy-button">Buy Now</button>
+                </figcaption>
+            </figure>
+            <figure class="product-card">
+                <img src="air1.webp" alt="Air Jordan 1 Mid Sky J mauve" height="300" width="230">
+                <figcaption class="product-details">
+                    <h3 class="product-description">Air Jordan 1 Mid Sky J mauve</h3>
+                    <p>Padded ankle support and a classic lace-up closure offer a secure fit. Elevate your style with the perfect blend of heritage and contemporary aesthetics in this must-have sneaker.</p>
+                    <p class="product-price">$150.99</p>
+                    <button class="buy-button">Buy Now</button>
 
-            </article>
-            <hr>
+                </figcaption>
+            </figure>
+            <figure class="product-card">
+                <img src="hat.jpg" alt="Channel sunglasses">
+                <figcaption class="product-details">
+                    <h3 class="product-description">Chanel Sunglass 01450 94305</h3>
+                    <p>With a sleek design, the frames feature a sophisticated blend of metal and acetate. The gradient lenses offer both style and UV protection. These sunglasses seamlessly combine luxury and fashion, making them a statement accessory for any occasion.</p>
+                  <p class="product-price">$50.99</p>
+                  <button class="button">Buy Now</button>
+                </figcaption>
+            </figure>
+        </article>
+        <hr>
+        <article id="Promos">
+            <section>
+                <h2>Promos</h2>
+                <h3>Limited Time Offer!!</h3>
+                <p>Get 20% off on all products this weekend! Use code: WEEKEND20</p>
+                <h3>Free Shipping</h3>
+                <p>Enjoy free shipping on orders over $50. Limited time only!</p>
+            </section>
+        </article>
+        <hr>
+        <article id="ContactUs">
+            <section>
+                <h2>Contact Us</h2>
+            </section>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <article id="Products">
-                <section>
-                    <h2>Products</h2>
-                    <h3>Air Force 1</h3>
-                </section>
-                <figure>
-                    <img src="shoes.jpg" alt="">
-                </figure>
-                <article>
-                    <section>
-                        <h3>Lv Sling bag</h3>
-                    </section>
-                    <figure>
-                        <img src="lv.jpg" alt="">
-                    </figure>
-                </article>
-                <article>
-                    <section>
-                        <h3>Versace Perfume</h3>
-                    </section>
-                    <figure>
-                        <img src="versace.jpg" alt="">
-                    </figure>
-                </article>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            </article>
-            <hr>
-            <article id="Promos">
-                <section>
-                    <h2>Promos</h2>
-                    <h3>Limited Time Offer!!</h3>
-                    <p>Get 20% off on all products this weekend! Use code: WEEKEND20</p>
-                    <h3>Free Shipping</h3>
-            <p>Enjoy free shipping on orders over $50. Limited time only!</p>
-                </section>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-            </article>
-            <hr>
-            <article id="ContactUs">
-                <section>
-                    <h2>ContactUs</h2>
-                </section>
-                <form>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-        
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-        
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-        
-                    <button type="submit">Submit</button>
-                </form>
-
-            </article>
-        </main>
-    
-   
-    
+                <button type="submit" class="buy-button">Submit</button>
+            </form>
+        </article>
+    </main>
 </body>
 </html>
